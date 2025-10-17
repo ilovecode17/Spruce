@@ -235,6 +235,10 @@ Musical works curated from historical records, with links to:
 ### Icons
 SVG icons for YouTube, Wikipedia, Spotify, and other services are used inline for performance.
 
+## RESTful API
+
+To access the database, use the Spruce RESTful API. For more information, visit [Spruce API GitHub](https://github.com/ilovecode17/Spruce-API)
+
 ## License
 
 This project is licensed under the MIT License.
