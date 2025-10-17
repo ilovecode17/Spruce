@@ -1,4 +1,4 @@
-# Spruce - Musical Time Travel
+# Spruce
 
 Spruce is a web application that allows users to explore the history of music by searching for compositions from any year in recorded history, from 2100 BC to 2020 AD. The application provides detailed information about historical musical works, including links to YouTube performances, Wikipedia articles, Spotify streams, and lyrics where available.
 
