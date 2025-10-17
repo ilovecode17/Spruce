@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spruce - Musical Time Travel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="url(#gradient)" stroke-width="2"/>
+                    <path d="M20 10v20M15 20l5-5 5 5" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>Spruce</h1>
+            </div>
+            <p class="tagline">Journey through time with music</p>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="input-wrapper">
+                    <input type="number" 
+                           id="yearInput" 
+                           placeholder="Enter a year (e.g., 1500)" 
+                           min="1" 
+                           max="3000"
+                           class="year-input">
+                    <select id="eraSelect" class="era-select">
+                        <option value="AD">AD</option>
+                        <option value="BC">BC</option>
+                    </select>
+                    <button id="searchBtn" class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 12l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Find Song
+                    </button>
+                </div>
+                <p class="hint">Try years from 2100 BC to 2020 AD</p>
+            </div>
+
+            <div id="resultSection" class="result-section hidden">
+                <div class="song-card">
+                    <div class="era-badge" id="eraBadge"></div>
+                    <h2 id="songTitle" class="song-title"></h2>
+                    
+                    <div class="song-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Year</span>
+                            <span id="songYear" class="meta-value"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Region</span>
+                            <span id="songRegion" class="meta-value"></span>
+                        </div>
+                    </div>
+
+                    <button id="toggleDetails" class="details-btn">
+                        <span>Show Details</span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+
+                    <div id="linksPanel" class="links-panel"></div>
+
+                    <div id="detailsPanel" class="details-panel hidden">
+                        <div class="detail-row">
+                            <span class="detail-label">Era</span>
+                            <span id="detailEra" class="detail-value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Composer/Artist</span>
+                            <span id="detailComposer" class="detail-value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Full Timeline</span>
+                            <span id="detailYear" class="detail-value"></span>
+                        </div>
+                    </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Era</span>
+                            <span id="detailEra" class="detail-value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Composer/Artist</span>
+                            <span id="detailComposer" class="detail-value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Full Timeline</span>
+                            <span id="detailYear" class="detail-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Searching through time...</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Discover music from every era of human history</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
